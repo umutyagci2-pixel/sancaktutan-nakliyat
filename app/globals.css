@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* Marka paleti — logodan türetildi */
+  --color-brand-50: #fef2f2;
+  --color-brand-100: #fde3e3;
+  --color-brand-200: #fbcbcb;
+  --color-brand-300: #f7a3a3;
+  --color-brand-400: #f06d6d;
+  --color-brand-500: #e23c3c;
+  --color-brand-600: #dc1f26; /* ana kırmızı */
+  --color-brand-700: #b9151b;
+  --color-brand-800: #99161b;
+  --color-brand-900: #7f181c;
+
+  --color-ink-50: #f4f6f8;
+  --color-ink-100: #e6eaee;
+  --color-ink-200: #cdd5dd;
+  --color-ink-300: #a8b4c0;
+  --color-ink-400: #7c8b9b;
+  --color-ink-500: #5b6670;
+  --color-ink-600: #44515d;
+  --color-ink-700: #353f49;
+  --color-ink-800: #2e3a47; /* ana antrasit */
+  --color-ink-900: #1f2832;
+  --color-ink-950: #141b22;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --shadow-soft: 0 10px 40px -12px rgb(31 40 50 / 0.18);
+  --shadow-card: 0 8px 30px -10px rgb(31 40 50 / 0.15);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f2832;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Scroll-reveal animasyonu */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* İnce nokta deseni */
+.bg-grid {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgb(46 58 71 / 0.06) 1px,
+    transparent 0
+  );
+  background-size: 26px 26px;
+}
+
+/* WhatsApp floating buton halkası */
+@keyframes ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgb(37 211 102 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(37 211 102 / 0);
+  }
+}
+.animate-ring {
+  animation: ring 2.4s infinite;
+}
