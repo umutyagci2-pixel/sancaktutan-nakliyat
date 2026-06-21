@@ -1,11 +1,20 @@
 # Sancaktutan Taşımacılık — Proje Durumu
 
-Son güncelleme: 2026-06-19
+Son güncelleme: 2026-06-22
 
-## Durum: İlk sürüm tamam, müşteri düzeltmeleri bekleniyor
+## Durum: CANLIDA 🔒 — https://sancaktutanevdenevenakliyat.com
 
-Site çalışıyor ve git'e commit edildi. Müşteri (işletme sahibi) bazı düzeltmeler
-gönderecek; onlarla tamamlanacak.
+Site GitHub Pages'te HTTPS ile yayında. Revizeler (hero görseli, sabit beyaz
+header, galeri 4 foto) uygulandı. SSL aktif ve zorunlu.
+
+## Yayın / Deploy
+- Host: **GitHub Pages**, repo `umutyagci2-pixel/sancaktutan-nakliyat` (public).
+  Kaynak `main`'de, build çıktısı `gh-pages` branch'inde.
+- Tam statik export: `next.config.ts` → `output: "export"` + `images.unoptimized`.
+  `sitemap.ts`/`robots.ts`/`manifest.ts`'te `export const dynamic = "force-static"`.
+- **Güncelleme yöntemi:** `npm run build` → `out/`'a `.nojekyll` + `CNAME`
+  (`sancaktutanevdenevenakliyat.com`) ekle → `out/`'u `gh-pages`'e force-push.
+- Domain Hostinger'da; apex `@` → GitHub Pages A kayıtları. Custom domain = apex.
 
 ## Çalıştırma
 ```bash
