@@ -14,15 +14,7 @@ const links = [
 ];
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -33,11 +25,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 shadow-[0_4px_30px_-12px_rgba(31,40,50,0.25)] backdrop-blur-md"
-          : "bg-transparent"
-      }`}
+      className="fixed inset-x-0 top-0 z-50 bg-white/90 shadow-[0_4px_30px_-12px_rgba(31,40,50,0.25)] backdrop-blur-md"
     >
       <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#anasayfa" className="flex items-center gap-2" aria-label={site.name}>
@@ -50,18 +38,10 @@ export default function Header() {
             priority
           />
           <span className="flex flex-col leading-none">
-            <span
-              className={`font-display text-lg font-extrabold tracking-tight transition-colors ${
-                scrolled ? "text-ink-900" : "text-white"
-              }`}
-            >
+            <span className="font-display text-lg font-extrabold tracking-tight text-ink-900">
               Sancaktutan
             </span>
-            <span
-              className={`text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors ${
-                scrolled ? "text-brand-600" : "text-brand-400"
-              }`}
-            >
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-600">
               Taşımacılık
             </span>
           </span>
@@ -72,9 +52,7 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className={`text-sm font-semibold transition-colors hover:text-brand-500 ${
-                scrolled ? "text-ink-700" : "text-white/90"
-              }`}
+              className="text-sm font-semibold text-ink-700 transition-colors hover:text-brand-500"
             >
               {l.label}
             </a>
@@ -84,11 +62,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href={`tel:${site.phones[0].tel}`}
-            className={`flex items-center gap-2 rounded-full border px-4 py-2.5 text-sm font-bold transition-all ${
-              scrolled
-                ? "border-ink-200 text-ink-800 hover:border-ink-300 hover:bg-ink-50"
-                : "border-white/30 text-white hover:bg-white/10"
-            }`}
+            className="flex items-center gap-2 rounded-full border border-ink-200 px-4 py-2.5 text-sm font-bold text-ink-800 transition-all hover:border-ink-300 hover:bg-ink-50"
           >
             <Icon name="phone" className="h-4 w-4 text-brand-600" />
             {site.phones[0].label}
@@ -108,11 +82,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className={`flex h-11 w-11 items-center justify-center rounded-xl border transition-colors lg:hidden ${
-            scrolled || open
-              ? "border-ink-200 text-ink-800"
-              : "border-white/30 text-white"
-          }`}
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-ink-200 text-ink-800 transition-colors lg:hidden"
           aria-label="Menüyü aç/kapat"
           aria-expanded={open}
         >

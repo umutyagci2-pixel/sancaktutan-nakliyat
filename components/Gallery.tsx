@@ -4,32 +4,26 @@ import SectionHeading from "./SectionHeading";
 
 const items = [
   {
-    src: "/images/ekip-tasima.jpg",
-    alt: "Evden eve nakliyat ekibi eşya taşırken",
+    src: "/images/galeri-evden-eve.jpg",
+    alt: "Sancaktutan evden eve nakliyat kamyonu eşya yüklerken",
     label: "Evden Eve Nakliyat",
     span: "sm:col-span-2 sm:row-span-2",
   },
   {
-    src: "/images/sehirlerarasi-nakliyat.jpg",
-    alt: "Şehirlerarası nakliyat tırı yolda",
+    src: "/images/galeri-sehirlerarasi.jpg",
+    alt: "Sancaktutan şehirlerarası nakliyat aracı yolda",
     label: "Şehirlerarası Taşıma",
-    span: "",
+    span: "sm:col-span-2",
   },
   {
-    src: "/images/depolama-lojistik.jpg",
-    alt: "Depolama ve lojistik deposu",
-    label: "Depolama & Lojistik",
-    span: "",
-  },
-  {
-    src: "/images/modern-ev.jpg",
+    src: "/images/galeri-yeni-ev.jpg",
     alt: "Yeni taşınılan modern ev",
     label: "Yeni Eviniz Hazır",
     span: "",
   },
   {
-    src: "/images/ic-mekan.jpg",
-    alt: "Taşıma sonrası kurulmuş modern salon",
+    src: "/images/galeri-kurulum.jpg",
+    alt: "Taşıma sonrası mobilya kurulum ve montaj ekibi",
     label: "Kurulum & Montaj",
     span: "",
   },

@@ -10,8 +10,8 @@ export default function Hero() {
       {/* Arka plan görseli */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/ekip-tasima.jpg"
-          alt="Sancaktutan Taşımacılık ekibi evden eve nakliyat yaparken"
+          src="/images/hero.jpg"
+          alt="Sancaktutan Taşımacılık ile profesyonelce paketlenmiş ev eşyaları"
           fill
           priority
           sizes="100vw"
