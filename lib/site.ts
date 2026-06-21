@@ -7,8 +7,8 @@ export const site = {
   legalName: "Sancaktutan Evden Eve Nakliyat",
   shortName: "Sancaktutan",
   tagline: "Nakliye & Taşımacılık",
-  // Domain alındığında burayı güncelle (örn. https://www.sancaktutannakliyat.com)
-  url: "https://www.sancaktutannakliyat.com",
+  // Canonical domain (www). DNS/Vercel'de www ana alan olarak ayarlanır.
+  url: "https://www.sancaktutanevdenevenakliyat.com",
   description:
     "Sancaktutan Taşımacılık; Hopa, Artvin ve Rize başta olmak üzere tüm Karadeniz ve Türkiye genelinde 7/24 evden eve nakliyat, mobil (kiralık) asansör, şehirlerarası ve şehir içi nakliyat hizmeti sunar. Sigortalı taşıma, ücretsiz keşif ve uygun fiyat.",
   // İletişim
