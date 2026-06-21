@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://sancaktutanevdenevenakliyat.com
+Sitemap: https://sancaktutanevdenevenakliyat.com/sitemap.xml
